@@ -1,0 +1,46 @@
+<VSTemplate Version="3.0.0" Type="ProjectGroup"
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>Micro services</Name>
+        <Description>Microservice project template using clean architecture with Unit tests.</Description>
+        <Icon>microservice.ico</Icon>
+        <ProjectType>CSharp</ProjectType>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectCollection>
+            <SolutionFolder Name="config">
+            </SolutionFolder>
+            <SolutionFolder Name="src">
+                <ProjectTemplateLink ProjectName="$safeprojectname$.API">
+                    API\API.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Application">
+                    Application\Application.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Domain">
+                    Domain\Domain.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Infrastructure">
+                    Infrastructure\Infrastructure.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Persistence">
+                    Persistence\Persistence.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+            <SolutionFolder Name="tests">
+                <ProjectTemplateLink ProjectName="$safeprojectname$.API.Tests" CopyParameters="true">
+                    API.Tests\API.Tests.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Application.Tests" CopyParameters="true">
+                    Application.Tests\Application.Tests.vstemplate
+                </ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Infrastructure.Tests" CopyParameters="true">
+					Infrastructure.Tests\Infrastructure.Tests.vstemplate
+				</ProjectTemplateLink>
+                <ProjectTemplateLink ProjectName="$safeprojectname$.Persistence.Tests" CopyParameters="true">
+                    Persistence.Tests\Persistence.Tests.vstemplate
+                </ProjectTemplateLink>
+            </SolutionFolder>
+        </ProjectCollection>
+    </TemplateContent>
+</VSTemplate>

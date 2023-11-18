@@ -1,0 +1,30 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Application</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Application</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.png</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.Application.csproj" File="Application.csproj" ReplaceParameters="true">
+      <Folder Name="Commands" TargetFolderName="Commands" />
+      <Folder Name="DTOs" TargetFolderName="DTOs" />
+      <Folder Name="Handlers" TargetFolderName="Handlers" />
+      <Folder Name="Interfaces" TargetFolderName="Interfaces" />
+      <Folder Name="Queries" TargetFolderName="Queries" />
+      <Folder Name="Services" TargetFolderName="Services" />
+      <Folder Name="Validators" TargetFolderName="Validators" />
+      <ProjectItem ReplaceParameters="true" TargetFileName="ApplicationServiceRegistration.cs">ApplicationServiceRegistration.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
